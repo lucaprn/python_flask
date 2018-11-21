@@ -13,13 +13,13 @@ def hello_world():
     return render_template('index.html')
 
 # provo ad aprire una pagina creata
-@app.route("/prova")
+@app.route('/prova')
 def prova():
     return render_template('prova.html', title='Prova')
 
 @app.route('/user/<name>')
 def user(name):
-    return '<h1> Hello %s </h1>' % name
+    return render_template('name.html', name=name)
 
 # request
 @app.route('/request')
